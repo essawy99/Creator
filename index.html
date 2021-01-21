@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>creator</title>
+    <link href="stylesheet.css" rel="stylesheet">
+
+
+    
+</head>
+
+
+<body>
+
+<!-- canvas containing creatot -->
+<canvas id = "myCanvas" ></canvas>
+
+    <!-- Left side menu -->
+    <div>
+        <p id = "commands" > These are all the key bindings that will allow you
+                            to create a drawing. <br><br>
+                            n&ensp;&ensp;&ensp;&ensp;&ensp;: create new shape<br>
+                            c&ensp;&ensp;&ensp;&ensp;&ensp;: close current shape<br>
+                            f&ensp;&ensp;&ensp;&ensp;&ensp;: fill current shape (input color)<br>
+                            s&ensp;&ensp;&ensp;&ensp;&ensp;: toggle visibility of all points 
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;on shape<br>
+                            o&ensp;&ensp;&ensp;&ensp;&ensp;: smooth current shape vhLines<br>
+                            shift : change stroke color (input color)<br>
+                            p&ensp;&ensp;&ensp;&ensp;&ensp;: print code (use js console to
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;find earlier prints or if you 
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;have issues copy & pasting)<br>
+                            l&ensp;&ensp;&ensp;&ensp;&ensp;: load save-code (insert save code 
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;below)
+
+        </p>
+        
+        <p id = "loadTitle" >Enter Save Code Here and press 'l':</p>
+        
+        <textarea id = "loadInput" type="text"  name="input" 
+            placeholder = "Only insert the text in between brackets" ></textarea>
+
+        <button id = "loadButton" type = "button" onclick = "currentDrawing.loadDrawing()">LOAD</button>
+        
+        <p id = "saveTitle" >Generated Code:</p>
+        
+        <p id = "saveOutput">generated code will print here</p>
+
+    </div>
+
+</body>
+
+
+<!-- Scripts that create functionality -->
+<script type= "text/javascript" src="paper-full.js"></script>
+<script type = "text/javascript" src = "globalVars.js"> </script>
+<script type = "text/javascript" src = "drawing.js"> </script>
+<script type = "text/javascript" src = "shape.js"> </script>
+<script type = "text/javascript" src = "vhLines.js"> </script>
+<script type = "text/javascript" src = "creator.js"> </script>
+    
+
+</html>
